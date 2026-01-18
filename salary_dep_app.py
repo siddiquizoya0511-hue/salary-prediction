@@ -20,8 +20,7 @@ age = st.number_input("Age", 18, 65, 25)
 
 gender = st.selectbox("Gender", ["Male", "Female"])
 education = st.selectbox("Education Level", ["Bachelor", "Master", "PhD"])
-job = st.selectbox("Job Title", job_title_list)
-
+job = st.selectbox("Job Title",["Account Manager"]
 experience = st.number_input("Years of Experience", 0.0, 40.0, 2.0)
 
 # -------- CREATE DATAFRAME --------
