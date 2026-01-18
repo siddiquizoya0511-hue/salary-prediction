@@ -14,7 +14,7 @@ import joblib
 model = joblib.load("salary_prediction_model.pkl")
 encoders = joblib.load("label_encoder_sp.pkl")
 
-st.title("salary Prediction App")
+st.title("Salary Prediction App")
 
 age = st.number_input("Age", 18, 65,25)
 
