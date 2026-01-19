@@ -37,31 +37,13 @@ if st.button("Predict Salary"):
     for col in encoders:
         df[col] = encoders[col].transform(df[col])
     
-
-
-    prediction = model.predict(df)
-    st.success(f"Predicted Salary: {prediction[0]:}")
+ prediction = model.predict(df)
+    st.success(f"Predicted Salary: {prediction[0]:,.2f}")
     
 
 
 
 
-model = joblib.load("model.pkl")
-encoders = joblib.load("label_encoder_sp.pkl")
-
-
-if st.button("Predict Salary"):
-    for col in encoders:
-        df[col] = encoders[col].transform(df[col])
-
-    df[["Age", "Years of Experience"]] = scaler.transform(
-        df[["Age", "Years of Experience"]]
-    )
-
-    df = df[model.feature_names_in_]
-
-    prediction = model.predict(df)
-    st.success(f"Predicted Salary: ₹{prediction[0]:,.2f}")
 
 
 
