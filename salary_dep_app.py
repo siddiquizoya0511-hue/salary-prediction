@@ -12,7 +12,7 @@ import pandas as pd
 import joblib
 
 model = joblib.load("model.pkl")
-encoders = joblib.load("label_encoders_sp.pkl")
+encoders = joblib.load("label_encoder_sp.pkl")
 
 st.title("salary Prediction App")
 
@@ -40,7 +40,7 @@ if st.button("Predict Salary"):
 
     prediction = model.predict(df)
     st.success(f"Predicted Salary: {prediction[0]:,.2f}")
-    st.success(f"Result: {result[0]}")
+    
 
 
 
